@@ -15,16 +15,16 @@ def f(x):
     else:
         return 0.25 / abs(x - 3/4)
 
-def trunc_geom_pmf(k, p):
-    if k > f(p):
+def trunc_geom_pmf(k, theta):
+    if k > f(theta):
         return 0
 
-    return geom.pmf(k, p)
+    return geom.pmf(k, theta)
 
-def posterior(p, samples):
+def posterior(theta, samples):
     pdf = 1
     for k in samples:
-        pdf *= trunc_geom_pmf(k, p)
+        pdf *= trunc_geom_pmf(k, theta)
     return pdf
 
 samples = []
