@@ -2,6 +2,7 @@
 
 import math
 import matplotlib.pyplot as plt
+from fractions import Fraction
 
 import geom
 
@@ -32,6 +33,11 @@ while True:
     sample = geom.sample(1/4)
     print('sampled', sample)
     samples.append(sample)
+
+    for theta in [Fraction(1,4), Fraction(3/4)]:
+        print('posterior(',theta,') =', posterior(theta, samples))
+    print('posterior(1/4)/posterior(3/4) =',
+          posterior(Fraction(1/4), samples) /  posterior(Fraction(3/4), samples))
 
     points = []
     STEPS=1000
