@@ -5,7 +5,7 @@ https://a-point-in-tumblspace.tumblr.com/post/189588000957/bayes-trubs-part-1
 
 That's pretty scary! This repo is a Monte Carlo simulation which attempts to implement a Bayesian reasoner coming to arbitrarily wrong conclusions (whatever that means) about the value of theta.
 
-# Runnning it
+# Running it
 
 ```./bayes-trubs.py```
 
